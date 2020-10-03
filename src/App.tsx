@@ -1,10 +1,14 @@
 import React from "react";
+import { Provider } from "react-redux";
+import store from "./lib/redux";
+
+import PureInboxScreen from "./components/InboxScreen";
 
 function App() {
   return (
-    <div>
-      <h1>TaskBox</h1>
-    </div>
+    <Provider store={store}>
+      <PureInboxScreen />
+    </Provider>
   );
 }
 
